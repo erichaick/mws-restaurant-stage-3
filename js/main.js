@@ -171,11 +171,11 @@ createRestaurantHTML = (restaurant) => {
 
   const newImage = document.createElement('picture');
   newImage.className = 'restaurant-img';
-  newImage.setAttribute('alt', 'Picture of ' + restaurant.name + " restaurant");
+  newImage.setAttribute('alt', restaurant.name);
   DBHelper
     .getSourcesForRestaurant(restaurant)
     .map(el => {
-      el.setAttribute('alt', 'Picture of ' + restaurant.name + " restaurant");
+      el.setAttribute('alt', restaurant.name);
       newImage.append(el);
     });
   li.append(newImage);
