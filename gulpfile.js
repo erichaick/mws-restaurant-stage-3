@@ -99,5 +99,5 @@ gulp.task('default',['images','css','concat-js','copy-serviceworker','watch', 's
 
 gulp.task('serve', serve({
   root: ['dist'] ,
-  port: 3000
+  port: 8001
 }));
